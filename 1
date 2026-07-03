@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-test-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cicd-test-app
+  template:
+    metadata:
+      labels:
+        app: cicd-test-app
+    spec:
+      containers:
+      - name: web
+        # 추후 Tekton 파이프라인이 빌드를 마치면 아래 태그(v1.0)를 자동으로 수정할 예정입니다!
+        image: watersooo/cicd-test:v1.0 
+        ports:
+        - containerPort: 80
