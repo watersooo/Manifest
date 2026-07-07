@@ -16,6 +16,6 @@ spec:
       containers:
       - name: web
         # 추후 Tekton 파이프라인이 빌드를 마치면 아래 태그(v1.0)를 자동으로 수정할 예정입니다!
-        image: sooo985900/cicd-test:build-and-push-run-7z5sx
+        image: sooo985900/cicd-test:build-and-push-run-jxdjt
         ports:
         - containerPort: 80
